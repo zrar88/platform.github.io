@@ -1,0 +1,1191 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="开发说明|规范, 玄鉴中台">
+    <meta name="description" content="注解|规范|Java">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>开发说明|规范 | 玄鉴中台</title>
+    <link rel="icon" type="image/png" href="/platform.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/platform.github.io/css/my.css">
+
+    <script src="/platform.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/platform.github.io/" class="waves-effect waves-light">
+                    
+                    <img src="/platform.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">玄鉴中台</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/guide" class="waves-effect waves-light">
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>指南</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a target="_blank" rel="noopener" href="http://192.168.2.117" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>演示</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/version" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>版本</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/platform.github.io/question" class="waves-effect waves-light">
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>常见问题</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/platform.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">玄鉴中台</div>
+        <div class="logo-desc">
+            
+            平台介绍
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/guide" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-book"></i>
+			
+			指南
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a target="_blank" rel="noopener" href="http://192.168.2.117" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			演示
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/version" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			版本
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/platform.github.io/question" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-book"></i>
+			
+			常见问题
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.qwkj.com%2Fuploads%2Fallimg%2F150903%2F1-150Z3133H32F.jpg&refer=http%3A%2F%2Fwww.qwkj.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660445970&t=cb57deda133c7b694e59364cf01ee431')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">开发说明|规范</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/platform.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        /* color: #42b983; */
+        color: #b8f0f3;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        /* color: #42b983; */
+        color: #b8f0f3;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/platform.github.io/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/platform.github.io/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
+                                <span class="chip bg-color">开发规范</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/platform.github.io/categories/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" class="post-category">
+                                开发规范
+                            </a>
+                        
+                            <a href="/platform.github.io/categories/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-02-20
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.1k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/platform.github.io/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="开发说明"><a href="#开发说明" class="headerlink" title="开发说明"></a>开发说明</h2><h3 id="EnableCustomConfig"><a href="#EnableCustomConfig" class="headerlink" title="@EnableCustomConfig"></a>@EnableCustomConfig</h3><p>服务启动类可以通过<code>@EnableCustomConfig </code>进行服务的初始化配置。该注解主要有以下几个作用：</p>
+<ol>
+<li>MappScan扫描支持</li>
+<li>ComponentScan扫描支持</li>
+</ol>
+<h3 id="EnableCustomSwagger2"><a href="#EnableCustomSwagger2" class="headerlink" title="@EnableCustomSwagger2"></a>@EnableCustomSwagger2</h3><p><code>@EnableCustomSwagger2</code> 对在线api文档支持，&#x2F;doc.html访问swagger加强</p>
+<h3 id="LoginUser"><a href="#LoginUser" class="headerlink" title="@LoginUser"></a>@LoginUser</h3><p>在controller参数中通过<code>@LoginUser SysUser loginUser</code> 获取当前登录用户<br><strong>示例</strong><br> <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/functions/manage"</span><span class="token punctuation">,</span> produces <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"application/json; charset=utf-8"</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">ResponseEntity</span> <span class="token function">queryManageFunctions</span><span class="token punctuation">(</span><span class="token annotation punctuation">@LoginUser</span> <span class="token class-name">SysUser</span> loginUser<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// ... </span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h3 id="Log-title-x3D-“设计”-businessType-x3D-BusinessType-INSERT"><a href="#Log-title-x3D-“设计”-businessType-x3D-BusinessType-INSERT" class="headerlink" title="@Log(title &#x3D; “设计”, businessType &#x3D; BusinessType.INSERT)"></a>@Log(title &#x3D; “设计”, businessType &#x3D; BusinessType.INSERT)</h3><p>在controller方法上通过注解<code>@Log </code>实现操作日志收集(主要针对曾、删、改操作)<br><strong>示例</strong><br> <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"保存"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Log</span><span class="token punctuation">(</span>title <span class="token operator">=</span> <span class="token string">"XXX保存"</span><span class="token punctuation">,</span> businessType <span class="token operator">=</span> <span class="token class-name">BusinessType</span><span class="token punctuation">.</span><span class="token constant">INSERT</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">ResObject</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Validated</span><span class="token punctuation">(</span><span class="token class-name">ValidType<span class="token punctuation">.</span>Default</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">BpmDefinitionDesignVO</span> vo<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h3 id="Valid"><a href="#Valid" class="headerlink" title="@Valid"></a>@Valid</h3><p><code>@Valid</code>会对被标注的controller入参类进行参数校验</p>
+<p>被标注的类中有<code>@Length</code>注解标注的字段，则该字段不能超过指定长度</p>
+<p>被标注的类有<code>@NotBlank</code>注解标注的字段，则该字段不能为空</p>
+<p>更多参数校验注解请参考hibernate validator</p>
+<p>当校验条件不满足的时候，会进入统一异常处理，统一异常处理会给前端返回code为0，message为指定message的消息</p>
+<p><strong>示例</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">ResponseEntity</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Valid</span> <span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">DeptBasic</span> dept<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DeptBasic</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token annotation punctuation">@NotBlank</span><span class="token punctuation">(</span>message <span class="token operator">=</span> <span class="token string">"部门名称不可为空"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> jgMc<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Length</span><span class="token punctuation">(</span>max <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> message <span class="token operator">=</span> <span class="token string">"选用标志长度最大为1"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> xybs<span class="token punctuation">;</span>
+
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2><h3 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h3><h4 id="1-写好代码注释，统一格式"><a href="#1-写好代码注释，统一格式" class="headerlink" title="1.写好代码注释，统一格式"></a>1.写好代码注释，统一格式</h4><p>类注释：<br>&#x2F;**</p>
+<ul>
+<li>@author 作者</li>
+<li>@Description 描述</li>
+<li>@Date 日期（年月日时分秒）<br>*&#x2F;</li>
+</ul>
+<p>方法注释：</p>
+<p>&#x2F;**</p>
+<ul>
+<li>@param formId  参数1描述</li>
+<li>@param instId  参数2描述</li>
+<li>@param taskKey 参数3描述</li>
+<li>@return  ResObject 返回描述<br>*&#x2F;</li>
+</ul>
+<h4 id="2-返回格式统一-“code”-””-”message”-””-”data”-””"><a href="#2-返回格式统一-“code”-””-”message”-””-”data”-””" class="headerlink" title="2.返回格式统一{“code”:””,”message”:””,”data”:””}"></a>2.返回格式统一{“code”:””,”message”:””,”data”:””}</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>200表示操作成功</td>
+</tr>
+<tr>
+<td>message</td>
+<td>提示信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据</td>
+</tr>
+</tbody></table>
+<h4 id="3-做好异常处理"><a href="#3-做好异常处理" class="headerlink" title="3.做好异常处理"></a>3.做好异常处理</h4><p>所有接口都必须有异常抛出，在controller里捕获所有异常并做处理<br><strong>示例</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/getData"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span><span class="token constant">GET</span><span class="token punctuation">,</span> produces <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"application/json; charset=utf-8"</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+   <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"获取表单数据"</span><span class="token punctuation">,</span> httpMethod <span class="token operator">=</span> <span class="token string">"GET"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"获取表单数据"</span><span class="token punctuation">)</span>
+   <span class="token keyword">public</span> <span class="token class-name">ResObject</span> <span class="token function">getData</span><span class="token punctuation">(</span><span class="token class-name">String</span> formId<span class="token punctuation">,</span> <span class="token class-name">String</span> instId<span class="token punctuation">,</span> <span class="token class-name">String</span> taskKey<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+       <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+           <span class="token class-name">List</span> result <span class="token operator">=</span> formDataService<span class="token punctuation">.</span><span class="token function">getDatas</span><span class="token punctuation">(</span>formId<span class="token punctuation">,</span> instId<span class="token punctuation">,</span> taskKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ResObject</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">"获取表单数据成功"</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">BusinessException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//业务异常捕获</span>
+           log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ResObject</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//程序异常捕获</span>
+           log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"获取表单数据失败"</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ResObject</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">"获取表单数据失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">&#125;</span>
+   <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="4-请求路劲规范"><a href="#4-请求路劲规范" class="headerlink" title="4.请求路劲规范"></a>4.请求路劲规范</h4><p>常规请求统一路径：<br>1.分页列表请求 GET &#x2F;modelName&#x2F;list<br>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">@GetMapping(&quot;list&quot;)
+@ApiOperation(value &#x3D; &quot;流程定义列表&quot;)
+@Log(title &#x3D; &quot;流程设计&quot;, businessType &#x3D; BusinessType.INSERT)
+public ResObject list(@LoginUser SysUser sysUser, BpmDefinitionDesignVO vo) &#123;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>详情请求 GET &#x2F;modelName&#x2F;{modelId}</p>
+<pre class="line-numbers language-none"><code class="language-none">@GetMapping(value &#x3D; &#123;&quot;&#x2F;&quot;, &quot;&#x2F;&#123;modelId&#125;&quot;&#125;)
+@ApiOperation(value &#x3D; &quot;获取用户信息&quot;)
+public ResObject getUser(@PathVariable(value &#x3D; &quot;modelId&quot;, required &#x3D; true) String modelId)) &#123;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2.保存请求 POST &#x2F;modelName&#x2F;<br>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">@PostMapping(&quot;&quot;)
+@ApiOperation(value &#x3D; &quot;定义保存&quot;)
+@Log(title &#x3D; &quot;设计&quot;, businessType &#x3D; BusinessType.INSERT)
+public ResObject saveDefinition(@LoginUser SysUser sysUser, @Validated(ValidType.Default.class) @RequestBody DefinitionDesignVO vo) &#123;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.更新请求 PUT &#x2F;modelName&#x2F;<br>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">@PutMapping(&quot;&quot;)
+@ApiOperation(value &#x3D; &quot;定义更新&quot;)
+@Log(title &#x3D; &quot;设计&quot;, businessType &#x3D; BusinessType.UPDATE)
+public ResObject updateDefinition(@LoginUser SysUser sysUser, @Validated(ValidType.Default.class) @RequestBody DefinitionDesignVO vo) &#123;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>4.删除请求 DELETE &#x2F;modelName&#x2F;</p>
+<pre class="line-numbers language-none"><code class="language-none">@DeleteMapping(&quot;&quot;)
+@ApiOperation(value &#x3D; &quot;定义删除&quot;)
+@Log(title &#x3D; &quot;设计&quot;, businessType &#x3D; BusinessType.DELETE)
+public ResObject deleteDefinition(@LoginUser SysUser sysUser,DefinitionDesignVO vo) &#123;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="5-feign"><a href="#5-feign" class="headerlink" title="5.feign"></a>5.feign</h4><p>以feign形式提供接口服务，接口地址统一“&#x2F;api”开头</p>
+<h4 id="6-mybatis-plus"><a href="#6-mybatis-plus" class="headerlink" title="6.mybatis-plus"></a>6.mybatis-plus</h4><p>mapper、dao 继承类BaseMapper<T>，并在T实体类上添加@TableName、@TableId注解<br><strong>示例</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@TableName</span><span class="token punctuation">(</span><span class="token string">"sys_unit"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SysUnit</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// ...实体类</span>
+    <span class="token comment">/**
+     * 机构主键
+     */</span>
+    <span class="token annotation punctuation">@TableId</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> unitId<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">SysUnitMapper</span> <span class="token keyword">extends</span> <span class="token class-name">BaseMapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SysUnit</span><span class="token punctuation">></span></span> <span class="token punctuation">&#123;</span>
+ <span class="token comment">// ...mapper || dao接口类 肠过操作可以省略代码块及自动映射</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="7-版本管理提交格式"><a href="#7-版本管理提交格式" class="headerlink" title="7.版本管理提交格式"></a>7.版本管理提交格式</h4><p>1.git版本管理提交：<br>add：新增XXX功能<br>fix：修复XXXbug  ||  完善XXX功能</p>
+<p>2.svn版本管理提交：<br>【提交人】XXX<br>【处理模块】工作流表单服务<br>【解决问题】新增添加表单保存接口</p>
+<h4 id="8-代码生成"><a href="#8-代码生成" class="headerlink" title="8.代码生成"></a>8.代码生成</h4><p>地址：<br><a target="_blank" rel="noopener" href="http://192.168.6.116:8080/">http://192.168.6.116:8080</a><br>需要先设计数据库表，根据表结构生成controller\service\dao\entity\mapper.xml等相关代码文件</p>
+<h4 id="9-license存放位置"><a href="#9-license存放位置" class="headerlink" title="9.license存放位置"></a>9.license存放位置</h4><p>win：将license文件存放到应用所在的磁盘根路径&#x2F;opt&#x2F;license&#x2F;文件夹下<br>linux：将license文件存放到&#x2F;opt&#x2F;license&#x2F;文件夹下</p>
+
+                
+            </div>
+            <hr/>
+
+            <!-- 
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/platform.github.io/about" rel="external nofollow noreferrer">Luke</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://zrar88.github.io/platform.github.io/2023/02/20/standard/">https://zrar88.github.io/platform.github.io/2023/02/20/standard/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/platform.github.io/about" target="_blank">Luke</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+ -->
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/platform.github.io/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/platform.github.io/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
+                                    <span class="chip bg-color">开发规范</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/platform.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/platform.github.io/2023/02/20/sm4/">
+                    <div class="card-image">
+                        
+                        <img src="/platform.github.io/medias/pic/sm4.jpeg" class="responsive-img" alt="SM4国密算法">
+                        
+                        <span class="card-title">SM4国密算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            国密加密|对称
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/platform.github.io/categories/%E5%AF%B9%E7%A7%B0/" class="post-category">
+                                    对称
+                                </a>
+                            
+                            <a href="/platform.github.io/categories/%E5%AF%B9%E7%A7%B0/%E5%9B%BD%E5%AF%86/" class="post-category">
+                                    国密
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/platform.github.io/tags/%E5%9B%BD%E5%AF%86/">
+                        <span class="chip bg-color">国密</span>
+                    </a>
+                    
+                    <a href="/platform.github.io/tags/%E5%AF%B9%E7%A7%B0/">
+                        <span class="chip bg-color">对称</span>
+                    </a>
+                    
+                    <a href="/platform.github.io/tags/sm4/">
+                        <span class="chip bg-color">sm4</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/platform.github.io/2023/02/20/%E5%B7%A5%E4%BD%9C%E6%B5%81%E9%9B%86%E6%88%90%E5%8A%9F%E8%83%BD/">
+                    <div class="card-image">
+                        
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-4a3ca0d2c3b16caf3165ec0fc6e98ee1_1200x500.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665024377&t=8e344f0dbdbcee4f8ed6b60923a89206" class="responsive-img" alt="工作流服务能力展示">
+                        
+                        <span class="card-title">工作流服务能力展示</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/platform.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="post-category">
+                                    工作流
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/platform.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+                        <span class="chip bg-color">工作流</span>
+                    </a>
+                    
+                    <a href="/platform.github.io/tags/%E5%BC%95%E6%93%8E/">
+                        <span class="chip bg-color">引擎</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/platform.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/platform.github.io/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/platform.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/platform.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/platform.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/platform.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <!-- <a href="/platform.github.io/about" target="_blank">Luke</a> -->
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> -->
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/platform.github.io/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/platform.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="/platform.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/platform.github.io/libs/aos/aos.js"></script>
+    <script src="/platform.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/platform.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/platform.github.io/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/platform.github.io/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/platform.github.io/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="easyweb" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/platform.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/platform.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/platform.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
